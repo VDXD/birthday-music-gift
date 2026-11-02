@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3f0">
+  <title>A Little Birthday Playlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <main class="frame" id="frame">
+    <div class="frame-grain" aria-hidden="true"></div>
+    <div class="top-label"><span class="tiny-star">✳</span> A LITTLE SOMETHING FOR YOU <span class="top-line"></span>
+    </div>
+
+    <button class="side-nav previous" id="previous" aria-label="Previous page" title="Previous page">
+      <span class="arrow">←</span><span class="nav-label">PREVIOUS</span>
+    </button>
+
+    <section class="message-page" id="messagePage">
+      <div class="message-decoration decoration-left" aria-hidden="true">✳</div>
+      <div class="message-decoration decoration-right" aria-hidden="true">♡</div>
+      <div class="message-content" id="openingMessage">
+        <p class="message-placeholder">Your opening birthday message goes here.</p>
+      </div>
+      <div class="opening-footnote"><span>01</span><span class="footnote-line"></span><span>JUST FOR YOU</span></div>
+    </section>
+
+    <section class="song-page" id="songPage" hidden>
+      <!-- <article class="letter-area">
+        <div class="letter-topline"><span class="chapter-mark">✦</span><span id="letterKicker">A NOTE FROM ME TO YOU</span></div>
+        <div class="letter-content" id="letterContent"></div>
+        <div class="letter-signoff"><span class="signoff-line"></span><span>with love, always</span><span class="signoff-heart">♡</span></div>
+        <div class="letter-watermark" aria-hidden="true">♡</div>
+      </article> -->
+      <aside class="song-column">
+        <div class="poster-frame">
+          <div class="poster-halo"></div>
+          <img id="poster" src="assets/covers/song-1.jpg" alt="Song poster">
+          <div class="poster-placeholder" id="posterPlaceholder">
+            <span class="poster-topline">THE SOUNDTRACK</span>
+            <span class="poster-note">♫</span>
+            <span class="poster-title" id="posterPlaceholderTitle">Song poster</span>
+            <span class="poster-hint">a song, a feeling, a memory</span>
+          </div>
+          <span class="poster-index" id="posterIndex">SIDE A · 01</span>
+        </div>
+        <div class="song-details">
+          <div class="song-meta">
+            <span class="song-overline">NOW PLAYING</span>
+            <span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <p class="song-title" id="songTitle">Song title</p>
+          <p class="song-artist" id="songArtist">Artist name</p>
+          <div class="audio-controls">
+            <button id="playButton" class="play-button" aria-label="Play song"><span>▶</span></button>
+            <input id="seekBar" type="range" min="0" max="100" value="0" aria-label="Song progress">
+            <span id="time">0:00</span>
+          </div>
+        </div>
+
+        <div class="song-caption"><span class="caption-spark">✧</span> picked with you in mind</div>
+        <audio id="audio" preload="metadata"></audio>
+      </aside>
+      <div class="song-message" id="songMessage"></div>
+    </section>
+
+    <button class="side-nav next" id="next" aria-label="Next page" title="Next page">
+      <span class="nav-label">NEXT</span><span class="arrow">→</span>
+    </button>
+    <div class="page-count" id="pageCount"><span>01</span><i></i><span>08</span></div>
+    <div class="bottom-label">SEVEN SONGS <span>·</span> ONE LITTLE UNIVERSE</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
